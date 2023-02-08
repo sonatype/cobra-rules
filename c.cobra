@@ -1,0 +1,13 @@
+# C pattern checks
+
+requires 3.9
+
+no_lhs_deref
+no_lhs_deref2
+non_void_no_return
+no_goto_after_target_label
+no_snprintf_targets
+for_loop_no_comparison
+possible_quadradic_sscanf
+use_memset_s
+curl_context_not_initialized

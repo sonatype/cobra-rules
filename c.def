@@ -1,0 +1,46 @@
+requires 3.9
+
+def no_lhs_deref
+    pat no_lhs_deref: * @ident ( .* ) =
+    ps caption no_lhs_deref Dereferencing a function call on the left hand side of assignment
+end
+
+def no_lhs_deref2
+    pat no_lhs_deref: * @ident ( ^)* ) =
+    ps caption no_lhs_deref Dereferencing a function call on the left hand side of assignment
+end
+
+def non_void_no_return
+    pat non_void_no_return: ^void @ident ( .* ) { .* return ; .* }
+    ps caption non_void_no_return Non-void function is failing to return a value
+end
+
+def no_goto_after_target_label
+    pat no_goto_after_target_label: goto x:@ident ; :x :
+    ps caption no_goto_after_target_label Goto is immediately followed by the target label
+end
+
+def no_snprintf_targets
+    pat no_snprintf_targets: x:@ident += snprintf ( ^,* :x .* /%s .* )
+    ps caption no_snprintf_targets Snprintf uses the same variable for assigment and argument
+end
+
+def for_loop_no_comparison
+    pat for_loop_no_comparison: for ( .* ; .* [< <=] .* ; ^[++ += ->]* )
+    ps caption for_loop_no_comparison A for loop is using less than comparison but not incrementing any value
+end
+
+def possible_quadradic_sscanf
+    pat possible_quadradic_sscanf: { .* x:@ident .* ( .* ) { .*  sscanf ( :x , .* ) .* } .* }
+    ps caption possible_quadradic_sscanf Using sscanf inside a loop over a buffer can lead to quadradic computational cost and poor performance
+end
+
+def use_memset_s
+    pat use_memset_s: { ^{* memset ( ^)* x:@ident , ^)* , ^)* ) ^:x* free ( ^)* :x ) .* }
+    ps caption use_memset_s Using `memset()` then `free()` suggests clearing of confidential information. Consider using `memset_s()` instead. Memset() might get optimized away and not occur.
+end
+
+def curl_context_not_initialized
+    pat curl_context_not_initialized: { .* [curl_easy_perform curl_easy_setopt curl_easy_getinfo] ( ^)* x:@ident ^)* ) ^:x* :x = curl_easy_init ( ) .* }
+    ps caption curl_context_not_initialized Used `curl_easy_{perform,getinfo,setopt}` before `curl_easy_init`. Perhaps the curl context was not initialized first (bug) or the previous curl context was not freed. Consider using `curl_easy_cleanup` before initializing a new context.
+end
