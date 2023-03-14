@@ -169,6 +169,19 @@
   },
 
   {
+    "Name": "documentbuilderfactory-disallow-doctype-decl-false",
+    "FileLocation": "./rules/documentbuilderfactory-disallow-doctype-decl-false.cobra",
+    "Language": "Java",
+    "Type": "",
+    "Message": "CWE-611",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
     "Name": "template",
     "FileLocation": "",
     "Language": "",
