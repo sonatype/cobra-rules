@@ -1,0 +1,2 @@
+pat { .* [curl_easy_perform curl_easy_setopt curl_easy_getinfo] ( ^)* x:@ident ^)* ) ^:x* :x = curl_easy_init ( ) .* }
+d

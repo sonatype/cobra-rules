@@ -1,0 +1,144 @@
+[
+  {
+    "Name": "jSQL",
+    "FileLocation": "./rules/jSQL.cobra",
+    "Language": "Java",
+    "Type": "Possible SQL Injection",
+    "Message": "An input string parameter used in string concat with result used in executeQuery",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+  
+  {
+    "Name": "noLHSDeref1",
+    "FileLocation": "./rules/noLHSDeref1.cobra",
+    "Language": "C",
+    "Type": "no_lhs_deref",
+    "Message": "Dereferencing a function call on the left hand side of assignment",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "noLHSDeref2",
+    "FileLocation": "./rules/noLHSDeref2.cobra",
+    "Language": "C",
+    "Type": "no_lhs_deref",
+    "Message": "Dereferencing a function call on the left hand side of assignment",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "nonVoidNoReturn",
+    "FileLocation": "./rules/nonVoidNoReturn.cobra",
+    "Language": "C",
+    "Type": "non_void_no_return",
+    "Message": "Non-void function is failing to return a value",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "noGotoAfterTargetLabel",
+    "FileLocation": "./rules/noGotoAfterTargetLabel.cobra",
+    "Language": "C",
+    "Type": "no_goto_after_target_label",
+    "Message": "Goto is immediately followed by the target label",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "noSnprinfTargets",
+    "FileLocation": "./rules/noSnprinfTargets.cobra",
+    "Language": "C",
+    "Type": "no_snprintf_targets",
+    "Message": "Snprintf uses the same variable for assigment and argument",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "forLoopNoComparison",
+    "FileLocation": "./rules/forLoopNoComparison.cobra",
+    "Language": "C",
+    "Type": "for_loop_no_comparison",
+    "Message": "A for loop is using less than comparison but not incrementing any value",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "possibleQuadraticSscanf",
+    "FileLocation": "./rules/possibleQuadraticSscanf.cobra",
+    "Language": "C",
+    "Type": "possible_quadradic_sscanf",
+    "Message": "Using sscanf inside a loop over a buffer can lead to quadradic computational cost and poor performance",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "useMemsetS",
+    "FileLocation": "./rules/useMemsetS.cobra",
+    "Language": "c",
+    "Type": "use_memset_s",
+    "Message": "Using `memset()` then `free()` suggests clearing of confidential information. Consider using `memset_s()` instead. Memset() might get optimized away and not occur.",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "curlContextNotInitializaed",
+    "FileLocation": "./rules/curlContextNotInitializaed.cobra",
+    "Language": "C",
+    "Type": "curl_context_not_initialized",
+    "Message": "Used `curl_easy_{perform,getinfo,setopt}` before `curl_easy_init`. Perhaps the curl context was not initialized first (bug) or the previous curl context was not freed. Consider using `curl_easy_cleanup` before initializing a new context.",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+  
+  {
+    "Name": "template",
+    "FileLocation": "",
+    "Language": "",
+    "Type": "",
+    "Message": "",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  }
+]

@@ -1,0 +1,2 @@
+pat @ident ( .* String p:@ident .*) { .* x:@ident = ^;* + :p + .* . /execute ( :x
+d
