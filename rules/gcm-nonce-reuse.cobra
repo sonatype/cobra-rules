@@ -1,0 +1,6 @@
+pe pat1: byte [ ] x:@ident = .* .getBytes ( .* ) .* new GCMParameterSpec ( .* :x .* )
+pe pat2: new GCMParameterSpec ( .* @ident .getBytes ( .* ) .* )
+
+ps pats = pat1 + pat2
+
+dp pats

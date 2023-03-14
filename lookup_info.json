@@ -143,11 +143,24 @@
   },
 
   {
-    "Name": "jjwt-none-alg.cobra",
+    "Name": "jjwt-none-alg",
     "FileLocation": "./rules/jjwt-none-alg.cobra",
     "Language": "Java",
     "Type": "",
     "Message": "CWE-327",
+    "Severity": "ERROR",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
+    "Name": "gcm-nonce-reuse",
+    "FileLocation": "./rules/gcm-nonce-reuse.cobra",
+    "Language": "Java",
+    "Type": "",
+    "Message": "CWE-323",
     "Severity": "ERROR",
     "Likelihood": "",
     "Library": "",
