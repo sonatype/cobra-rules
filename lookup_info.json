@@ -143,6 +143,19 @@
   },
 
   {
+    "Name": "jjwt-none-alg.cobra",
+    "FileLocation": "./rules/jjwt-none-alg.cobra",
+    "Language": "Java",
+    "Type": "",
+    "Message": "CWE-327",
+    "Severity": "ERROR",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
     "Name": "template",
     "FileLocation": "",
     "Language": "",
