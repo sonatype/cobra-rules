@@ -1,0 +1,6 @@
+pe scenarioA: r:@ident m:@ident ( .* String x:@ident .* ) { .* Session session:@ident = .* \; .* String q:@ident = .* + :x + .* \; .* PreparedStatement ps:@ident = :session .connection ( ) .prepareStatement ( :q ) \; .* ResultSet res:@ident = :ps .executeQuery ( ) \; .* }
+
+pe scenarioB: r:@ident m:@ident ( .* String x:@ident .* ) { .* String q:@ident = .* + :x + .* \; .* Session session:@ident = .* \; .* PreparedStatement ps:@ident = :session .connection ( ) .prepareStatement ( :q ) \; .* ResultSet res:@ident = :ps .executeQuery ( ) \; .* } 
+
+ps combination = scenarioA + scenarioB
+dp combination

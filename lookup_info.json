@@ -130,6 +130,19 @@
   },
   
   {
+    "Name": "find-sql-string-concatenation",
+    "FileLocation": "./rules/find-sql-string-concatenation.cobra",
+    "Language": "Java",
+    "Type": "",
+    "Message": "CWE-89",
+    "Severity": "ERROR",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+  {
     "Name": "template",
     "FileLocation": "",
     "Language": "",
