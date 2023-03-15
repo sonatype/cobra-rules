@@ -1,2 +1,3 @@
-pat @ident ( .* String p:@ident .*) { .* x:@ident = ^;* + :p + .* . /execute ( :x
-d
+##this doesn't work right
+##pat @ident ( .* String p:@ident .*) { .* x:@ident = ^;* + :p + .* . /execute ( :x
+##d
