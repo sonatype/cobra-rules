@@ -117,8 +117,8 @@
   },
 
   {
-    "Name": "curlContextNotInitializaed",
-    "FileLocation": "./rules/curlContextNotInitializaed.cobra",
+    "Name": "curlContextNotInitialized",
+    "FileLocation": "./rules/curlContextNotInitialized.cobra",
     "Language": "C",
     "Type": "curl_context_not_initialized",
     "Message": "Used `curl_easy_{perform,getinfo,setopt}` before `curl_easy_init`. Perhaps the curl context was not initialized first (bug) or the previous curl context was not freed. Consider using `curl_easy_cleanup` before initializing a new context.",

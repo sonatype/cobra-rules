@@ -6,9 +6,9 @@ pe builder: @ident @ident ( .* ) { .* Jwts .builder ( ) .* \; .* }
 ps notSignWith = builder - signWith
 
 %{
-  imp = pset(ic);
+  im = pset(ic);
   nsw = pset(notSignWith);
-  if ( imp.seq != 0 ) {
+  if ( im.seq != 0 ) {
     if ( nsw.seq != 0 ) {
       st = nsw.p_start;
       ed = nsw.p_end;
