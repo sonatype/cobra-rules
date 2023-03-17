@@ -5,10 +5,15 @@ pe builder: @ident @ident ( .* ) { .* Jwts .builder ( ) .* \; .* }
 
 ps notSignWith = builder - signWith
 
+def bothimport
 %{
-  im = pset(ic);
+  a = Begin;
+  b = Begin.nxt;
+  add_pattern(ic, a, b);
+  add_pattern(notSignWith, a, b);
+  imp = pset(ic);
   nsw = pset(notSignWith);
-  if ( im.seq != 0 ) {
+  if ( imp.seq != 0 ) {
     if ( nsw.seq != 0 ) {
       st = nsw.p_start;
       ed = nsw.p_end;
@@ -17,5 +22,7 @@ ps notSignWith = builder - signWith
   }
   Stop;
 %}
+end
+bothimport
 
 dp output
