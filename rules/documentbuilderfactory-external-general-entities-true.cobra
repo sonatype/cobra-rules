@@ -1,0 +1,2 @@
+pe A: @ident .setFeature ( /"http://xml\.org/sax/features/external-general-entities" , true ) \;    
+dp A

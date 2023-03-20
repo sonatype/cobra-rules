@@ -132,6 +132,7 @@
   {
     "Name": "find-sql-string-concatenation",
     "FileLocation": "./rules/find-sql-string-concatenation.cobra",
+    "TestFiles" : ["/home/kennethmclarney/Documents/Projects/Cobrah/cobra-rules/testcode/Cls.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-89",
@@ -145,6 +146,7 @@
   {
     "Name": "jjwt-none-alg",
     "FileLocation": "./rules/jjwt-none-alg.cobra",
+    "TestFiles": ["./testcode/jjwt-none-alg/App.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-327",
@@ -158,6 +160,7 @@
   {
     "Name": "gcm-nonce-reuse",
     "FileLocation": "./rules/gcm-nonce-reuse.cobra",
+    "TestFiles" : ["./testcode/GcmHardcodedIV.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-323",
@@ -171,6 +174,7 @@
   {
     "Name": "documentbuilderfactory-disallow-doctype-decl-false",
     "FileLocation": "./rules/documentbuilderfactory-disallow-doctype-decl-false.cobra",
+    "TestFiles": ["./testcode/DocumentBuilderFactory.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-611",
@@ -182,8 +186,37 @@
   },
 
   {
+    "Name": "documentbuilderfactory-external-general-entities-true",
+    "FileLocation": "./rules/documentbuilderfactory-external-general-entities-true.cobra",
+    "TestFiles" : ["./testcode/documentbuilderfactory-external-general-entities-true/DocumentBuilderFactory.java"],
+    "Language": "Java",
+    "Type": "",
+    "Message": "CWE-611",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+  {
+    "Name": "documentbuilderfactory-external-general-entities-true",
+    "FileLocation": "./rules/documentbuilderfactory-external-parameter-entities-true.cobra",
+    "TestFiles" : ["./testcode/documentbuilderfactory-external-parameter-entities-true/BuilderFactory.java"],
+    "Language": "",
+    "Type": "",
+    "Message": "CWE-611",
+    "Severity": "",
+    "Likelihood": "",
+    "Library": "",
+    "Category": "",
+    "CheckType": ""
+  },
+
+
+  {
     "Name": "template",
     "FileLocation": "",
+    "TestFiles" : [""],
     "Language": "",
     "Type": "",
     "Message": "",
@@ -193,4 +226,5 @@
     "Category": "",
     "CheckType": ""
   }
+
 ]
