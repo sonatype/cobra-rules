@@ -1,0 +1,3 @@
+pe pat1: @ident @ident ( .* String x:@ident .* ) { .* HttpClient c:@ident = new HttpClient ( ) \; .* y:@ident z:@ident = new :y ( :x ) \; .* :c .executeMethod ( :z ) \; .* }
+
+dp pat1

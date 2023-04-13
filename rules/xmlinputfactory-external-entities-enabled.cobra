@@ -1,0 +1,2 @@
+pe A: @ident ( .* ) { .* @ident .setProperty ( /"javax\.xml\.stream\.isSupportingExternalEntities" , true ) .* } 
+dp A

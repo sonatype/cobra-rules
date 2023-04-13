@@ -1,0 +1,5 @@
+pe A: @ident @ident ( .* ) { .* Digester x:@ident = .* :x .parse ( .* ) .* }
+pe B: @ident @ident ( .* ) { .* Digester x:@ident = .* :x .setFeature ( \/"http://apache\.org/xml/features/disallow-doctype-decl" , true ) \; .* :x .setFeature ( \/"http://xml\.org/sax/features/external-general-entities" , false ) \; .* :x .setFeature ( \/"http://xml\.org/sax/features/external-parameter-entities" , false ) \; .* } 
+
+ps C = A - B
+dp C

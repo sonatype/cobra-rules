@@ -1,0 +1,2 @@
+pe A: interface @ident extends Remote { .* @ident @ident ( Object @ident ) throws RemoteException 
+dp A

@@ -1,0 +1,9 @@
+pe either1: @ident @ident ( .* ) { .* DocumentBuilderFactory x:@ident = .* \; .* DocumentBuilder y:@ident = :x .newDocumentBuilder ( ) \; .* :y .parse ( .* ) \; .* }
+##it looks like either2 doesn't exist as an example, honestly annoying
+pe not1: @ident @ident ( .* ) { .* DocumentBuilderFactory x:@ident .* :x .setXIncludeAware ( true ) \; .* :x .setNamespaceAware ( true ) \; .* :x .setFeature ( \/http://apache\.org/xml/features/disallow-doctype-decl" , true ) \; .* :x .setFeature ( \/http://xml\.org/sax/features/external-general-entities" , false ) \; .* :x .setFeature ( \/"http://xml\.org/sax/features/external-parameter-entities" , false ) \; .* } 
+
+pe not2: @ident @ident ( .* ) { .* DocumentBuilderFactory x:@ident = .* \; .* :x .setXIncludeAware ( true ) \; .* :x .setNamespaceAware ( true ) \; .* :x .setFeature ( \/"http://apache\.org/xml/features/disallow-doctype-decl" , true ) \; .* :x .setFeature ( \/"http://xml\.org/sax/features/external-general-entities" , false ) \; .* :x .setFeature ( \/"http://xml\.org/sax/features/external-parameter-entities" , false ) \; .* }
+ps tmp1 = either1 - not1
+ps output = tmp1 - not2
+
+dp output
