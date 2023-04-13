@@ -132,7 +132,7 @@
   {
     "Name": "find-sql-string-concatenation",
     "FileLocation": "./rules/find-sql-string-concatenation.cobra",
-    "TestFiles" : ["/home/kennethmclarney/Documents/Projects/Cobrah/cobra-rules/testcode/Cls.java"],
+    "TestFiles" : ["./testcode/Cls.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-89",
@@ -215,7 +215,7 @@
   {
     "Name": "server-dangerous-object-deserialization",
     "FileLocation": "./rules/server-dangerous-object-deserialization.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/ServerDangerousObjectDeserialization.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-502",
@@ -228,7 +228,7 @@
   {
     "Name": "servlet-response-writer-xss",
     "FileLocation": "./rules/servletresponse-writer-xss.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/ClsServletResponse.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-79",
@@ -241,7 +241,7 @@
   {
     "Name": "xmlinputfactory-external-entities-enabled",
     "FileLocation": "./rules/xmlinputfactory-external-entities-enabled.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/XMLInputFactory.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-611",
@@ -254,7 +254,7 @@
   {
     "Name": "owasp-java-ssrf-java-net-url",
     "FileLocation": "./rules/owasp-java-ssrf-java-net-url",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/HttpUtils1.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-918",
@@ -267,7 +267,7 @@
   {
     "Name": "owasp-java-xxe-javax-xml-parsers-DocumentBuilderFactory",
     "FileLocation": "./rules/owasp-java-xxe-javax-xml-parsers-DocumentBuilderFactory.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/XXE1.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-611",
@@ -280,7 +280,7 @@
   {
     "Name": "owasp-java-xxe-org-apache-commons-digester3-Digester",
     "FileLocation": "./rules/owasp-java-xxe-org-apache-commons-digester3-Digester.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/Digester.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-611",
@@ -293,7 +293,7 @@
   {
     "Name": "owasp-java-ssrf-org-apache-commons-httpclient",
     "FileLocation": "./rules/owasp-java-ssrf-org-apache-commons-httpclient.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/HttpUtils2.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-918",
@@ -306,7 +306,7 @@
   {
     "Name": "owasp-java-ssrf-org-apache-http-impl-client-CloseableHttpClient",
     "FileLocation": "./rules/owasp-java-ssrf-org-apache-http-impl-client-CloseableHttpClient.cobra",
-    "TestFiles" : [""],
+    "TestFiles" : ["./testcode/HttpUtils3.java"],
     "Language": "Java",
     "Type": "",
     "Message": "CWE-918",
