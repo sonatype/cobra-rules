@@ -1,0 +1,28 @@
+pe ic: import io.jsonwebtoken.Jwts
+
+pe signWith: @ident @ident ( .* ) { .* Jwts .builder ( ) .* .signWith ( .* ) .* \; .* } 
+pe builder: @ident @ident ( .* ) { .* Jwts .builder ( ) .* \; .* } 
+
+ps notSignWith = builder - signWith
+
+def bothimport
+%{
+  a = Begin;
+  b = Begin.nxt;
+  add_pattern(ic, a, b);
+  add_pattern(notSignWith, a, b);
+  imp = pset(ic);
+  nsw = pset(notSignWith);
+  if ( imp.seq != 0 ) {
+    if ( nsw.seq != 0 ) {
+      st = nsw.p_start;
+      ed = nsw.p_end;
+      add_pattern(output, st, ed);
+    }
+  }
+  Stop;
+%}
+end
+bothimport
+
+dp output

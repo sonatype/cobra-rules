@@ -1,0 +1,8 @@
+pe pat1: @ident @ident ( .* String x:@ident .* ) { .* CloseableHttpClient c:@ident = .* \; .* y:@ident z:@ident = new :y ( :x ) \; .* HttpResponse . = :c .execute ( :z ) \; .* } 
+##pretty sure the semgrep rule is actually wrong and they meant to swap out the ordering of the 2 middle lines as they're not dependent on each other
+
+pe pat2: @ident @ident ( .* String x:@ident .* ) { .* y:@ident z:@ident = new :y ( :x ) \; .* CloseableHttpClient c:@ident = .* \; .* HttpResponse . = :c .execute ( :z ) \; .* }
+
+dp pat1
+dp pat2
+

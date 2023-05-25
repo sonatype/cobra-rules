@@ -1,0 +1,30 @@
+pe A0: @ident ( .* HttpServletResponse res:@ident .* ) throws ServletException , IOException { .* v:@ident = r:@ident .getParameter ( .* ) .* :res .getWriter ( .* ) .write ( :v ) .* }
+pe A1: @ident ( .* HttpServletResponse res:@ident .* ) throws IOException , ServletException { .* v:@ident = r:@ident .getParameter ( .* ) .* :res .getWriter ( .* ) .write ( :v ) .* }
+pe A2: @ident ( .* HttpServletResponse res:@ident .* ) throws IOException { .* v:@ident = r:@ident .getParameter ( .* ) .* :res .getWriter ( .* ) .write ( :v ) .* }
+pe A3: @ident ( .* HttpServletResponse res:@ident .* ) throws ServletException { .* v:@ident = r:@ident .getParameter ( .* ) .* :res .getWriter ( .* ) .write ( :v ) .* }
+pe A4: @ident ( .* HttpServletResponse res:@ident .* ) { .* v:@ident = r:@ident .getParameter ( .* ) .* :res .getWriter ( .* ) .write ( :v ) .* }
+
+r
+ps tmp0 = A0 + A1
+ps tmp1 = tmp0 + A2
+ps tmp2 = tmp1 + A3
+ps Aterms = tmp2 + A4
+r
+
+
+pe B0: @ident ( .* HttpServletResponse res:@ident .* ) throws ServletException , IOException { .* v:@ident = r:@ident .getParameter ( .* ) .* writer:@ident = :res .getWriter ( .* ) .* :writer .write ( :v ) .* } 
+pe B1: @ident ( .* HttpServletResponse res:@ident .* ) throws IOException , ServletException { .* v:@ident = r:@ident .getParameter ( .* ) .* writer:@ident = :res .getWriter ( .* ) .* :writer .write ( :v ) .* } 
+pe B2: @ident ( .* HttpServletResponse res:@ident .* ) throws ServletException { .* v:@ident = r:@ident .getParameter ( .* ) .* writer:@ident = :res .getWriter ( .* ) .* :writer .write ( :v ) .* } 
+pe B3: @ident ( .* HttpServletResponse res:@ident .* ) throws IOException { .* v:@ident = r:@ident .getParameter ( .* ) .* writer:@ident = :res .getWriter ( .* ) .* :writer .write ( :v ) .* } 
+pe B4: @ident ( .* HttpServletResponse res:@ident .* ) { .* v:@ident = r:@ident .getParameter ( .* ) .* writer:@ident = :res .getWriter ( .* ) .* :writer .write ( :v ) .* } 
+
+r
+ps tmpB0 = B0 + B1
+ps tmpB1 = tmpB0 + B2
+ps tmpB2 = tmpB1 + B3
+ps Bterms = tmpB2 + B4
+r
+
+ps output = Aterms + Bterms
+dp output
+

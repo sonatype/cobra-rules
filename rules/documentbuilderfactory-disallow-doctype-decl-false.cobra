@@ -1,0 +1,16 @@
+pe patyes: @ident @ident ( .* ) throws @ident { .* @ident .setFeature ( /"http://apache\.org/xml/features/disallow-doctype-decl" , false ) .* }
+
+pe not1: @ident @ident ( .* ) throws @ident { .* x:@ident .setFeature ( /"http://xml\.org/sax/features/external-general-entities" , false ) \; .* :x .setFeature ( "http://xml\.org/sax/features/external-parameter-entities" , false ) \; .* } 
+
+pe not2: @ident @ident ( .* ) throws @ident { .* x:@ident .setFeature ( /"http://xml\.org/sax/features/external-parameter-entities" , false ) \; .* :x .setFeature ( "http://xml\.org/sax/features/external-general-entities" , false ) \; .* } 
+
+pe not3: @ident @ident ( .* ) throws @ident { .* x:@ident .setAttribute ( XMLConstants \. ACCESS_EXTERNAL_DTD , \"" ) \; .* :x .setAttribute ( XMLConstants \. ACCESS_EXTERNAL_SCHEMA , "" ) \; .* }
+
+pe not4: @ident @ident ( .* ) throws @ident { .* x:@ident .setAttribute ( XMLConstants \. ACCESS_EXTERNAL_SCHEMA , \"" ) \; .* :x .setAttribute ( XMLConstants \. ACCESS_EXTERNAL_DTD , "" ) \; .* }
+
+ps intermed1 = patyes - not1
+ps intermed2 = intermed1 - not2
+ps intermed3 = intermed2 - not3
+ps output = intermed3 - not4
+
+dp output

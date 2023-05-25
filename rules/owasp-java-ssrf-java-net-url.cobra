@@ -1,0 +1,2 @@
+pe A: @ident @ident ( .* String x:@ident .* ) { .* URL url:@ident = new URL ( :x ) .* }
+dp A
